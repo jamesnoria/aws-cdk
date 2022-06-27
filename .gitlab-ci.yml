@@ -12,5 +12,5 @@ build react:
         - yarn build
     artifacts:
         paths: 
-            - /build/
+            - frontend/build
 
