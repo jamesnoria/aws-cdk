@@ -14,3 +14,10 @@ build react:
         paths: 
             - frontend/build
 
+deploy to S3:
+    image: 
+        name: amazon/aws-cli:2.4.11
+        entrypoint: [""]
+    stage: deploy
+    script:
+        - aws s3 sync frontend/build s3://$AWS_S3_BUCKET --delete
