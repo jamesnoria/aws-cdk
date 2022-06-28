@@ -22,6 +22,7 @@ export default class PersonList extends React.Component {
   render() {
     return (
       <ul>
+        <h1>Hola viejo</h1>
         {this.state.testing.map((test) => (
           <img src={test.url} alt="test" />
         ))}

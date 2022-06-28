@@ -46,13 +46,13 @@ export class S3ReadCdkStack extends Stack {
       }
     );
 
-    new s3deploy.BucketDeployment(this, "WebsiteBucketDeployment", {
-      sources: [
-        s3deploy.Source.asset(path.resolve(__dirname, "../../frontend/build")),
-      ],
-      destinationBucket: websiteBucket,
-      distribution: cloudFront,
-    });
+    //new s3deploy.BucketDeployment(this, "WebsiteBucketDeployment", {
+    //  sources: [
+    //    s3deploy.Source.asset(path.resolve(__dirname, "../../frontend/build")),
+    //  ],
+    //  destinationBucket: websiteBucket,
+    //  distribution: cloudFront,
+    //});
 
     const uploadCV = new lambda.Function(this, "ResumeUploadLambda", {
       runtime: lambda.Runtime.NODEJS_12_X,
