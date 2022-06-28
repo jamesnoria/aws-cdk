@@ -8,6 +8,7 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
+    "synth": "cdk synth",
     "predeploy": "tsc",
     "deploy": "cdk deploy --require-approval never"
   },
