@@ -1,6 +1,7 @@
 stages:
     - build
-    - deploy
+    - deployS3
+    - deployCDK
 
 build react:
     image: node:16-alpine
@@ -18,7 +19,13 @@ deploy to S3:
     image: 
         name: amazon/aws-cli:2.4.11
         entrypoint: [""]
-    stage: deploy
+    stage: deployS3
     script:
         - aws s3 sync frontend/build s3://$AWS_S3_BUCKET --delete
-        - aws cdk deploy
+
+deploy CDK:
+    image: node:16-alpine
+    stage: deployCDK
+    script:
+        - yarn install
+        - yarn deploy

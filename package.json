@@ -5,10 +5,11 @@
     "s3-read-cdk": "bin/s3-read-cdk.js"
   },
   "scripts": {
-    "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "predeploy": "tsc",
+    "deploy": "cdk deploy"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
