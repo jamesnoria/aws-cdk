@@ -9,7 +9,7 @@
     "test": "jest",
     "cdk": "cdk",
     "predeploy": "tsc",
-    "deploy": "cdk deploy"
+    "deploy": "cdk deploy --require-approval never"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
